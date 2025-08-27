@@ -1,0 +1,5 @@
+{
+  "name": "LifeQuest",
+  "description": "LifeQuest is a simulation of a gamified life RPG where users complete real-world tasks presented as AI-generated quests to level up their life skills.",
+  "requestFramePermissions": []
+}

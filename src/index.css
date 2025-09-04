@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Ensure body takes up full height for gradient */
+    min-height: 100vh;
+  }
+  html.light body {
+    background: linear-gradient(-45deg, #f5f3ff, #e9d5ff, #f5f3ff);
+    background-size: 400% 400%;
+    animation: gradient-light 15s ease infinite;
+  }
+
+  html.dark body {
+    background: linear-gradient(-45deg, #0d0617, #1f0f38, #0d0617);
+    background-size: 400% 400%;
+    animation: gradient-dark 15s ease infinite;
+  }
+
+  /* Universal transition for smooth theme changes */
+  * {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+}
+
+@keyframes gradient-light {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient-dark {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

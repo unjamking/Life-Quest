@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifeQuest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+          },
+          colors: {
+            'brand-purple': '#8B5CF6', // A more saturated purple
+            'brand-purple-light': '#A78BFA', // Lighter purple for hover
+            'light-1': '#F3F4F6', // Inputs/light bg elements: Neutral light gray
+            'light-2': '#FFFFFF', // Cards: White
+            'light-3': '#E5E7EB', // Borders: Soft gray
+            'dark-1': '#111827',  // Dark mode bg: Very dark gray
+            'dark-2': '#1F2937',  // Dark mode cards: Dark gray
+            'dark-3': '#4B5563',  // Borders/muted text: Muted gray
+            'white': '#FFFFFF',
+            'dark': {
+              '1': '#111827', // text on light bg
+              '2': '#374151', // secondary text
+              '3': '#6B7280', // muted text
+            },
+            'light': {
+              '1': '#F9FAFB', // main text on dark bg
+              '2': '#D1D5DB', // secondary text
+              '3': '#9CA3AF', // muted text
+            }
+          },
+          animation: {
+            'pulse-glow': 'pulse-glow 3s infinite ease-in-out',
+          },
+          keyframes: {
+            'pulse-glow': {
+              '0%, 100%': {
+                transform: 'scale(1)',
+                boxShadow: '0 0 15px #8B5CF6, 0 0 30px #8B5CF6',
+              },
+              '50%': {
+                transform: 'scale(1.05)',
+                boxShadow: '0 0 25px #A78BFA, 0 0 50px #A78BFA',
+              },
+            }
+          }
+        }
+      }
+    }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.16.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.542.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.12",
+    "vite": "https://aistudiocdn.com/vite@^7.1.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.2"
+  }
+}
+</script>
+</head>
+<body class="text-dark-1 dark:text-light-1">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

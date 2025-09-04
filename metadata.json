@@ -1,0 +1,5 @@
+{
+  "name": "LifeQuest",
+  "description": "A gamified productivity web application that uses quests, skills, and an AI coach to motivate users to achieve their goals. Track your progress, level up your real-life skills, and embark on a journey of self-improvement.",
+  "requestFramePermissions": []
+}
